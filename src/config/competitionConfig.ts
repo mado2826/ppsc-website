@@ -169,7 +169,7 @@ export const competitionConfig: CompetitionConfig = {
       name: 'Nikhil Mehta',
       role: 'PPSC President, Cofounder, Logistics Lead',
       affiliation: 'NCSSM',
-      email: 'mehtan27n@ncssm.edu',
+      email: 'mehta27n@ncssm.edu',
     },
     {
       id: 'contrib-3',
