@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useConfig } from '../../hooks/useConfig'
 
 export const Footer = () => {
@@ -18,36 +19,36 @@ export const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="/competition"
+                <Link
+                  to="/competition"
                   className="text-gray-400 hover:text-primary-400 text-sm transition-colors"
                 >
                   Competition Info
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/practice"
+                <Link
+                  to="/practice"
                   className="text-gray-400 hover:text-primary-400 text-sm transition-colors"
                 >
                   Practice Tests
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/leaderboard"
+                <Link
+                  to="/leaderboard"
                   className="text-gray-400 hover:text-primary-400 text-sm transition-colors"
                 >
                   Leaderboard
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/archive"
+                <Link
+                  to="/archive"
                   className="text-gray-400 hover:text-primary-400 text-sm transition-colors"
                 >
                   Archive
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -56,12 +57,12 @@ export const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
             <p className="text-gray-400 text-sm">
               For questions or support, please visit our{' '}
-              <a
-                href="/contributors"
+              <Link
+                to="/contributors"
                 className="text-primary-400 hover:text-primary-300"
               >
                 Contributors
-              </a>{' '}
+              </Link>{' '}
               page.
             </p>
           </div>

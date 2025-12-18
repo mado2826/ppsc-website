@@ -49,7 +49,7 @@ export const competitionConfig: CompetitionConfig = {
 
   // Google Forms
   forms: {
-    registration: 'https://forms.gle/example-registration-form',
+    registration: 'https://docs.google.com/forms/d/e/1FAIpQLSeaGqVKQ4kgsVsWJlATgjXjFPpyAzNUzwQGr7rt6XQLQNNKOg/viewform?usp=header',
     surveys: [
       'https://forms.gle/example-survey-1',
       'https://forms.gle/example-survey-2',
