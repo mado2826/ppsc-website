@@ -10,7 +10,6 @@ interface FilterDropdownProps {
   value: string
   onChange: (value: string) => void
   placeholder?: string
-  multiple?: boolean
   className?: string
 }
 
@@ -19,7 +18,6 @@ export const FilterDropdown = ({
   value,
   onChange,
   placeholder = 'Select...',
-  multiple = false,
   className = '',
 }: FilterDropdownProps) => {
   const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
@@ -41,4 +39,3 @@ export const FilterDropdown = ({
     </select>
   )
 }
-

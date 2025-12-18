@@ -1,7 +1,6 @@
 import { useConfig } from '../hooks/useConfig'
 import { Section } from '../components/ui/Section'
 import { CompetitionList } from '../components/competition/CompetitionList'
-import { formatCompetitionDate } from '../config/competitionConfig'
 
 export default function Schedule() {
   const config = useConfig()

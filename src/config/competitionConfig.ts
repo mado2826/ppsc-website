@@ -72,9 +72,9 @@ export const competitionConfig: CompetitionConfig = {
   // Competition rules & info
   rules: {
     format: 'Online, timed competition with multiple choice and free response questions',
-    duration: '60 minutes',
-    scoring: 'Points awarded for correct answers. Partial credit for free response questions.',
-    eligibility: 'Open to all students and physics enthusiasts. No age restrictions.',
+    duration: '1 week',
+    scoring: 'Points awarded for correct answers. No pentalty for incorrect answers.',
+    eligibility: 'Open to all high school students who are physics enthusiasts.',
   },
 
   // Practice tests

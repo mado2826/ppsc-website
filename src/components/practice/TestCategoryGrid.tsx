@@ -1,7 +1,6 @@
 import { PracticeTestCategory } from '../../types'
 import { TestCard } from './TestCard'
 import { Section } from '../ui/Section'
-import { Card } from '../ui/Card'
 
 interface TestCategoryGridProps {
   categories: PracticeTestCategory[]

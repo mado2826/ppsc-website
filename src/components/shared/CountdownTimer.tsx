@@ -1,9 +1,7 @@
-import { useConfig } from '../../hooks/useConfig'
 import { getNextCompetitionDate } from '../../config/competitionConfig'
 import { Timer } from '../ui/Timer'
 
 export const CountdownTimer = () => {
-  const config = useConfig()
   const nextDate = getNextCompetitionDate()
 
   if (!nextDate) {
