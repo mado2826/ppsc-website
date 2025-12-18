@@ -4,6 +4,10 @@ import { useConfig } from '../../hooks/useConfig'
 export const Footer = () => {
   const config = useConfig()
 
+  const handleLinkClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <footer className="bg-gray-900 border-t border-gray-800 mt-auto">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -21,6 +25,7 @@ export const Footer = () => {
               <li>
                 <Link
                   to="/competition"
+                  onClick={handleLinkClick}
                   className="text-gray-400 hover:text-primary-400 text-sm transition-colors"
                 >
                   Competition Info
@@ -29,6 +34,7 @@ export const Footer = () => {
               <li>
                 <Link
                   to="/practice"
+                  onClick={handleLinkClick}
                   className="text-gray-400 hover:text-primary-400 text-sm transition-colors"
                 >
                   Practice Tests
@@ -37,6 +43,7 @@ export const Footer = () => {
               <li>
                 <Link
                   to="/leaderboard"
+                  onClick={handleLinkClick}
                   className="text-gray-400 hover:text-primary-400 text-sm transition-colors"
                 >
                   Leaderboard
@@ -45,6 +52,7 @@ export const Footer = () => {
               <li>
                 <Link
                   to="/archive"
+                  onClick={handleLinkClick}
                   className="text-gray-400 hover:text-primary-400 text-sm transition-colors"
                 >
                   Archive
@@ -59,6 +67,7 @@ export const Footer = () => {
               For questions or support, please visit our{' '}
               <Link
                 to="/contributors"
+                onClick={handleLinkClick}
                 className="text-primary-400 hover:text-primary-300"
               >
                 Contributors

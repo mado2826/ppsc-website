@@ -71,9 +71,12 @@ export const competitionConfig: CompetitionConfig = {
 
   // Competition rules & info
   rules: {
-    format: 'Online, timed competition with multiple choice and free response questions',
+    format: 'Online, timed competition with 25 multiple choice questions.',
     duration: '1 week',
-    scoring: 'Points awarded for correct answers. No pentalty for incorrect answers.',
+    scoring: [ '4 points awarded per correct answer for the first 20 questions', 
+               '6 points awarded per correct answer for the last 5 questions', 
+               '1 points awarded for a blank answer',
+               'No pentalty for incorrect answers.' ].join('; '),
     eligibility: 'Open to all high school students who are physics enthusiasts.',
   },
 

@@ -3,14 +3,16 @@ import { format, parseISO, differenceInSeconds, isAfter, isBefore, startOfToday 
 /**
  * Converts a UTC date to EST/EDT
  * EST is UTC-5, EDT is UTC-4 (daylight saving time)
+ * This function properly handles date boundaries when converting timezones
  */
 const convertToEST = (utcDate: Date): Date => {
-  // Create a date in EST timezone
-  // EST is UTC-5, but we need to account for DST (EDT is UTC-4)
-  // For simplicity, we'll use a fixed offset of -5 hours for EST
-  // You can enhance this to detect DST if needed
-  const estOffset = -5 * 60 * 60 * 1000 // -5 hours in milliseconds
-  return new Date(utcDate.getTime() + estOffset)
+  // EST is UTC-5, so subtract 5 hours from UTC time
+  const estOffsetMs = -5 * 60 * 60 * 1000 // -5 hours in milliseconds
+  const estTimestamp = utcDate.getTime() + estOffsetMs
+  
+  // Create a new date from the adjusted timestamp
+  // This ensures the date component is correct after timezone conversion
+  return new Date(estTimestamp)
 }
 
 /**
@@ -95,16 +97,75 @@ export const formatDateRange = (startDate: string, endDate: string): string => {
     const startUTC = parseISO(startDate)
     const endUTC = parseISO(endDate)
     
-    const start = convertToEST(startUTC)
-    const end = convertToEST(endUTC)
+    // Get UTC components
+    const startYear = startUTC.getUTCFullYear()
+    const startMonth = startUTC.getUTCMonth()
+    const startDay = startUTC.getUTCDate()
+    const startHours = startUTC.getUTCHours()
+    const startMinutes = startUTC.getUTCMinutes()
+    
+    const endYear = endUTC.getUTCFullYear()
+    const endMonth = endUTC.getUTCMonth()
+    const endDay = endUTC.getUTCDate()
+    const endHours = endUTC.getUTCHours()
+    const endMinutes = endUTC.getUTCMinutes()
+    
+    // Convert to EST (UTC-5)
+    let startESTHours = startHours - 5
+    let startESTDay = startDay
+    let startESTMonth = startMonth
+    let startESTYear = startYear
+    
+    let endESTHours = endHours - 5
+    let endESTDay = endDay
+    let endESTMonth = endMonth
+    let endESTYear = endYear
+    
+    // Handle day rollover for start date
+    if (startESTHours < 0) {
+      startESTHours += 24
+      startESTDay -= 1
+      if (startESTDay < 1) {
+        startESTMonth -= 1
+        if (startESTMonth < 0) {
+          startESTMonth = 11
+          startESTYear -= 1
+        }
+        startESTDay = new Date(startESTYear, startESTMonth + 1, 0).getDate()
+      }
+    }
+    
+    // Handle day rollover for end date
+    if (endESTHours < 0) {
+      endESTHours += 24
+      endESTDay -= 1
+      if (endESTDay < 1) {
+        endESTMonth -= 1
+        if (endESTMonth < 0) {
+          endESTMonth = 11
+          endESTYear -= 1
+        }
+        endESTDay = new Date(endESTYear, endESTMonth + 1, 0).getDate()
+      }
+    }
+    
+    // Create date objects for formatting (using local timezone but with EST values)
+    const startEST = new Date(startESTYear, startESTMonth, startESTDay, startESTHours, startMinutes)
+    const endEST = new Date(endESTYear, endESTMonth, endESTDay, endESTHours, endMinutes)
     
     // If same day, show single date with time range
-    if (format(start, 'yyyy-MM-dd') === format(end, 'yyyy-MM-dd')) {
-      return `${format(start, 'MMMM d, yyyy')} ${format(start, 'h:mm a')} - ${format(end, 'h:mm a')} EST`
+    if (startESTYear === endESTYear && startESTMonth === endESTMonth && startESTDay === endESTDay) {
+      const timeFormat = (hours: number, minutes: number) => {
+        const period = hours >= 12 ? 'PM' : 'AM'
+        const displayHours = hours % 12 || 12
+        const displayMinutes = minutes.toString().padStart(2, '0')
+        return `${displayHours}:${displayMinutes} ${period}`
+      }
+      return `${format(startEST, 'MMMM d, yyyy')} ${timeFormat(startESTHours, startMinutes)} - ${timeFormat(endESTHours, endMinutes)} EST`
     }
     
     // Different days, show date range
-    return `${format(start, 'MMMM d, yyyy')} - ${format(end, 'MMMM d, yyyy')}`
+    return `${format(startEST, 'MMMM d, yyyy')} - ${format(endEST, 'MMMM d, yyyy')}`
   } catch {
     return `${startDate} - ${endDate}`
   }
