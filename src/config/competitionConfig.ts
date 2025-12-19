@@ -41,7 +41,7 @@ export const competitionConfig: CompetitionConfig = {
       endDate: '2026-01-17T23:59:59Z',
       name: 'January 2026 Competition',
       description: 'First competition of the year!',
-      registrationDeadline: '2025-12-31T23:59:59Z',
+      registrationDeadline: '2026-01-09T23:59:59Z',
       countdownTarget: 'start',
       status: 'upcoming',
     },
@@ -85,7 +85,7 @@ export const competitionConfig: CompetitionConfig = {
     categories: [
       {
         id: 'test-1',
-        name: 'Practice Test 1',
+        name: 'Practice Questions 1',
         description: 'Prepare for the competition with practice tests on:\n' +
   '• Kinematics, dynamics, energy, momentum, and rotational motion\n' +
   '• Electric fields, magnetic fields, circuits, and electromagnetic waves\n' +
@@ -97,7 +97,7 @@ export const competitionConfig: CompetitionConfig = {
             duration: 99999,
             difficulty: 'intermediate',
             questions: 25,
-            link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+            link: 'https://drive.google.com/file/d/1C3uGIz-nfpPKrkO7xgSWorrAmyH_cQP2/view?usp=sharing',
           },
         //   {
         //     id: 'mech-2',

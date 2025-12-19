@@ -35,7 +35,7 @@ export const CompetitionCard = ({ competition, onClick }: CompetitionCardProps) 
           
           {competition.registrationDeadline && (
             <span className="text-sm text-gray-400">
-              Registration: {formatCompetitionDate(competition.registrationDeadline)}
+              Registration Deadline: {formatCompetitionDate(competition.registrationDeadline)}
             </span>
           )}
         </div>
