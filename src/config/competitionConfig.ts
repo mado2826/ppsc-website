@@ -7,7 +7,7 @@ export const competitionConfig: CompetitionConfig = {
   // Site metadata
   siteName: 'North Carolina Physics Olympiad',
   siteDescription: 'A monthly recurring physics competition for students and enthusiasts',
-
+ 
   // Competition schedule
   // IMPORTANT: id must be in YYYY-MM format to match competition_id in Google Sheets
   competitionDates: [
@@ -259,6 +259,11 @@ export const competitionConfig: CompetitionConfig = {
         email: 'yang27k@ncssm.edu',
       },
   ],
+
+  socials: {
+    instagram: 'https://www.instagram.com/ncssmphysicsclub/',
+    discord: 'https://discord.gg/eVqrfEhw6y',
+  },
 
   // Leaderboard settings
   leaderboard: {

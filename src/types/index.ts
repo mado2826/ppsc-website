@@ -106,6 +106,10 @@ export interface CompetitionConfig {
     categories: PracticeTestCategory[];
   };
   contributors: Contributor[];
+  socials?: {
+    instagram?: string
+    discord?: string
+  }
   leaderboard: LeaderboardSettings;
   theme?: ThemeConfig;
 }

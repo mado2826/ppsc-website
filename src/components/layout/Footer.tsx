@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { useConfig } from '../../hooks/useConfig'
 
+import { Instagram, MessageCircle } from 'lucide-react'
+
 export const Footer = () => {
   const config = useConfig()
 
@@ -11,7 +13,8 @@ export const Footer = () => {
   return (
     <footer className="bg-gray-900 border-t border-gray-800 mt-auto">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> */}
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">
               {config.siteName}
@@ -75,11 +78,44 @@ export const Footer = () => {
               page.
             </p>
           </div>
-        </div>
 
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Social</h3>
+            <ul className="space-y-2">
+            {config.socials?.instagram && (
+              <li>
+                <a
+                  href={config.socials.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-gray-400 hover:text-primary-400 text-sm transition-colors"
+                >
+                  <Instagram className="w-4 h-4" />
+                  Instagram
+                </a>
+              </li>
+            )}
+              {config.socials?.discord && (
+                <li>
+                  <a
+                    href={config.socials.discord}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-gray-400 hover:text-primary-400 text-sm transition-colors"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    Discord
+                  </a>
+                </li>
+              )}
+            </ul>
+        </div>
+        </div>
+        
         <div className="mt-8 pt-8 border-t border-gray-800 text-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} {config.siteName}. All rights reserved.
+            {/* © {new Date().getFullYear()} {config.siteName}. All rights reserved. */}
+            © {new Date().getFullYear()} {'NCSSM Physics Club'}. All rights reserved.
           </p>
         </div>
       </div>
