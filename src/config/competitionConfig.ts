@@ -73,10 +73,10 @@ export const competitionConfig: CompetitionConfig = {
   rules: {
     format: 'Online, timed competition with 25 multiple choice questions.',
     duration: '1 week',
-    scoring: [ '4 points awarded per correct answer for the first 20 questions', 
-               '6 points awarded per correct answer for the last 5 questions', 
-               '1 points awarded for a blank answer',
-               'No points for incorrect answers.' ].join('; '),
+    scoring: '• 4 points awarded per correct answer for the first 20 questions\n'+
+               '• 6 points awarded per correct answer for the last 5 questions\n'+
+               '• 1 points awarded for a blank answer\n'+
+               '• No points for incorrect answers.',
     eligibility: 'Open to all students who are physics enthusiasts.',
   },
 
@@ -91,14 +91,14 @@ export const competitionConfig: CompetitionConfig = {
   '• Electric fields, magnetic fields, circuits, and electromagnetic waves\n' +
   '• Heat, temperature, entropy, and thermodynamic processes',
         tests: [
-        //   {
-        //     id: 'mech-1',
-        //     title: 'Kinematics Basics',
-        //     duration: 30,
-        //     difficulty: 'beginner',
-        //     questions: 10,
-        //     link: 'https://example.com/test/mech-1',
-        //   },
+          {
+            id: 'p1',
+            title: 'Test',
+            duration: 99999,
+            difficulty: 'intermediate',
+            questions: 25,
+            link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+          },
         //   {
         //     id: 'mech-2',
         //     title: 'Newton\'s Laws',

@@ -52,7 +52,7 @@ export const CompetitionInfo = () => {
               </div>
               <div>
                 <h4 className="font-semibold text-white mb-2">Scoring</h4>
-                <p className="text-gray-300">{config.rules.scoring}</p>
+                <p className="text-gray-300 whitespace-pre-line">{config.rules.scoring}</p>
               </div>
               <div>
                 <h4 className="font-semibold text-white mb-2">Eligibility</h4>
