@@ -23,7 +23,7 @@ export const Section = ({
             </h2>
           )}
           {subtitle && (
-            <p className="text-lg text-gray-400">{subtitle}</p>
+            <p className="text-lg text-gray-400 whitespace-pre-line">{subtitle}</p>
           )}
         </div>
       )}

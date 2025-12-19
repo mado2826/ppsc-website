@@ -76,17 +76,20 @@ export const competitionConfig: CompetitionConfig = {
     scoring: [ '4 points awarded per correct answer for the first 20 questions', 
                '6 points awarded per correct answer for the last 5 questions', 
                '1 points awarded for a blank answer',
-               'No pentalty for incorrect answers.' ].join('; '),
-    eligibility: 'Open to all high school students who are physics enthusiasts.',
+               'No points for incorrect answers.' ].join('; '),
+    eligibility: 'Open to all students who are physics enthusiasts.',
   },
 
   // Practice tests
   practiceTests: {
     categories: [
       {
-        id: 'mechanics',
-        name: 'Mechanics',
-        description: 'Kinematics, dynamics, energy, momentum, and rotational motion',
+        id: 'test-1',
+        name: 'Practice Test 1',
+        description: 'Prepare for the competition with practice tests on:\n' +
+  '• Kinematics, dynamics, energy, momentum, and rotational motion\n' +
+  '• Electric fields, magnetic fields, circuits, and electromagnetic waves\n' +
+  '• Heat, temperature, entropy, and thermodynamic processes',
         tests: [
         //   {
         //     id: 'mech-1',
@@ -114,44 +117,44 @@ export const competitionConfig: CompetitionConfig = {
         //   },
         ],
       },
-      {
-        id: 'electromagnetism',
-        name: 'Electromagnetism',
-        description: 'Electric fields, magnetic fields, circuits, and electromagnetic waves',
-        tests: [
-        //   {
-        //     id: 'em-1',
-        //     title: 'Electric Fields',
-        //     duration: 30,
-        //     difficulty: 'beginner',
-        //     questions: 10,
-        //     link: 'https://example.com/test/em-1',
-        //   },
-        //   {
-        //     id: 'em-2',
-        //     title: 'Magnetic Fields',
-        //     duration: 45,
-        //     difficulty: 'intermediate',
-        //     questions: 15,
-        //     link: 'https://example.com/test/em-2',
-        //   },
-        ],
-      },
-      {
-        id: 'thermodynamics',
-        name: 'Thermodynamics',
-        description: 'Heat, temperature, entropy, and thermodynamic processes',
-        tests: [
-        //   {
-        //     id: 'thermo-1',
-        //     title: 'Heat and Temperature',
-        //     duration: 30,
-        //     difficulty: 'beginner',
-        //     questions: 10,
-        //     link: 'https://example.com/test/thermo-1',
-        //   },
-        ],
-      },
+    //   {
+    //     id: 'electromagnetism',
+    //     name: 'Electromagnetism',
+    //     description: 'Electric fields, magnetic fields, circuits, and electromagnetic waves',
+    //     tests: [
+    //     //   {
+    //     //     id: 'em-1',
+    //     //     title: 'Electric Fields',
+    //     //     duration: 30,
+    //     //     difficulty: 'beginner',
+    //     //     questions: 10,
+    //     //     link: 'https://example.com/test/em-1',
+    //     //   },
+    //     //   {
+    //     //     id: 'em-2',
+    //     //     title: 'Magnetic Fields',
+    //     //     duration: 45,
+    //     //     difficulty: 'intermediate',
+    //     //     questions: 15,
+    //     //     link: 'https://example.com/test/em-2',
+    //     //   },
+    //     ],
+    //   },
+    //   {
+    //     id: 'thermodynamics',
+    //     name: 'Thermodynamics',
+    //     description: 'Heat, temperature, entropy, and thermodynamic processes',
+    //     tests: [
+    //     //   {
+    //     //     id: 'thermo-1',
+    //     //     title: 'Heat and Temperature',
+    //     //     duration: 30,
+    //     //     difficulty: 'beginner',
+    //     //     questions: 10,
+    //     //     link: 'https://example.com/test/thermo-1',
+    //     //   },
+    //     ],
+    //   },
     ],
   },
 
@@ -185,6 +188,76 @@ export const competitionConfig: CompetitionConfig = {
       affiliation: 'NCSSM',
       email: 'kumar27p@ncssm.edu',
     },
+    {
+        id: 'contrib-5',
+        name: 'Alan Cai',
+        role: 'PPSC Marketing Director, PLASMA Marketing Lead',
+        affiliation: 'NCSSM',
+        email: 'cai27a1@ncssm.edu',
+      },
+      {
+        id: 'contrib-6',
+        name: 'Jack Chen',
+        role: 'PPSC Marketing Director, PLASMA Marketing Lead',
+        affiliation: 'NCSSM',
+        email: 'chen27j1@ncssm.edu',
+      },
+      {
+        id: 'contrib-7',
+        name: 'Baya Belgaied',
+        role: 'PPSC Competition Director, Director of Outreach for PLASMA',
+        affiliation: 'NCSSM',
+        email: 'belgaied27b@ncssm.edu',
+      },
+      {
+        id: 'contrib-8',
+        name: 'Colin Xu',
+        role: 'Treasurer of PPSC',
+        affiliation: 'NCSSM',
+        email: 'xu27c@ncssm.edu',
+      },
+      {
+        id: 'contrib-9',
+        name: 'Sadhana Subramanian',
+        role: 'PLASMA Marketing Lead',
+        affiliation: 'NCSSM',
+        email: 'subramanian27s@ncssm.edu',
+      },
+      {
+        id: 'contrib-10',
+        name: 'Grisham Paimagam',
+        role: 'Director of Outreach for PLASMA, Academic Lead for PLASMA',
+        affiliation: 'NCSSM',
+        email: 'paimagam27g@ncssm.edu',
+      },
+      {
+        id: 'contrib-11',
+        name: 'Raghav Arun',
+        role: 'Director of Outreach for PLASMA',
+        affiliation: 'NCSSM',
+        email: 'arun27r@ncssm.edu',
+      },
+      {
+        id: 'contrib-12',
+        name: 'Nolan Sheldon',
+        role: 'Academic Lead for PLASMA',
+        affiliation: 'NCSSM',
+        email: 'sheldon27n@ncssm.edu',
+      },
+      {
+        id: 'contrib-13',
+        name: 'Aaron Zhu',
+        role: 'Academic Lead for PLASMA',
+        affiliation: 'NCSSM',
+        email: 'zhu27a@ncssm.edu',
+      },
+      {
+        id: 'contrib-14',
+        name: 'Kevin Yang',
+        role: 'Academic Lead for PLASMA',
+        affiliation: 'NCSSM',
+        email: 'yang27k@ncssm.edu',
+      },
   ],
 
   // Leaderboard settings
