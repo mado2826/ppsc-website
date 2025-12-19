@@ -85,7 +85,7 @@ export const competitionConfig: CompetitionConfig = {
     categories: [
       {
         id: 'test-1',
-        name: 'Practice Questions 1',
+        name: 'Practice Questions',
         description: 'Prepare for the competition with practice tests on:\n' +
   '• Kinematics, dynamics, energy, momentum, and rotational motion\n' +
   '• Electric fields, magnetic fields, circuits, and electromagnetic waves\n' +
@@ -93,11 +93,11 @@ export const competitionConfig: CompetitionConfig = {
         tests: [
           {
             id: 'p1',
-            title: 'Test',
-            duration: 99999,
-            difficulty: 'intermediate',
-            questions: 25,
-            link: 'https://drive.google.com/file/d/1C3uGIz-nfpPKrkO7xgSWorrAmyH_cQP2/view?usp=sharing',
+            title: 'Practice 1',
+            // duration: 99999,
+            // difficulty: 'intermediate',
+            // questions: 25,
+            link: 'https://drive.google.com/file/d/11Z0xe88ykuKHbdNE2wgaEt_wjFYMZPGm/view?usp=sharing',
           },
         //   {
         //     id: 'mech-2',

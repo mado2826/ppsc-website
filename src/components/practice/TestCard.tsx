@@ -24,19 +24,19 @@ export const TestCard = ({ test, onClick }: TestCardProps) => {
     >
       <div className="space-y-4">
         <div className="flex items-center justify-between">
-          <Badge variant={difficultyColors[test.difficulty]}>
+          {/* <Badge variant={difficultyColors[test.difficulty]}>
             {test.difficulty.charAt(0).toUpperCase() + test.difficulty.slice(1)}
-          </Badge>
-          <span className="text-sm text-gray-400">
+          </Badge> */}
+          {/* <span className="text-sm text-gray-400">
             {test.duration} min
-          </span>
+          </span> */}
         </div>
 
-        {test.questions && (
+        {/* {test.questions && (
           <p className="text-sm text-gray-400">
             {test.questions} questions
           </p>
-        )}
+        )} */}
 
         {test.link && (
           <Button

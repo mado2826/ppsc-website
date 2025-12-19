@@ -36,10 +36,10 @@ export interface Competition {
 export interface PracticeTest {
   id: string;
   title: string;
-  duration: number; // minutes
-  difficulty: 'beginner' | 'intermediate' | 'advanced';
+  // duration: number; // minutes
+  // difficulty: 'beginner' | 'intermediate' | 'advanced';
   link?: string;
-  questions?: number;
+  // questions?: number;
 }
 
 export interface PracticeTestCategory {
