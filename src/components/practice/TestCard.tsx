@@ -1,5 +1,5 @@
 import { Card } from '../ui/Card'
-import { Badge } from '../ui/Badge'
+// import { Badge } from '../ui/Badge'
 import { Button } from '../ui/Button'
 import { PracticeTest } from '../../types'
 
@@ -9,11 +9,11 @@ interface TestCardProps {
 }
 
 export const TestCard = ({ test, onClick }: TestCardProps) => {
-  const difficultyColors = {
-    beginner: 'success',
-    intermediate: 'primary',
-    advanced: 'accent',
-  } as const
+  // const difficultyColors = {
+  //   beginner: 'success',
+  //   intermediate: 'primary',
+  //   advanced: 'accent',
+  // } as const
 
   return (
     <Card
